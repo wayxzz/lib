@@ -1,7 +1,22 @@
 const masks = {
     'default': 'ddd MMM dd yyyy HH:mm:ss'
 }
+
+/**
+ * d{1,4}        匹配1-4个字母d  天
+ * M{1,4}        匹配1-4个字母M  月
+ * yy(?:yy)?     匹配2或4个字母y  年
+ * S{1,3}        匹配1-3个字母S
+ * Do            匹配Do
+ * ZZ            匹配ZZ
+ * ([HhMsDm])\1? 匹配HH、hh、MM、ss、DD、mm
+ * [aA]          匹配a或A
+ * "[^"]*"       匹配双引号
+ * '[^']*'       匹配单引号
+ */
 const token = /d{1,4}|M{1,4}|yy(?:yy)?|S{1,3}|Do|ZZ|([HhMsDm])\1?|[aA]|"[^"]*"|'[^']*'/g;
+
+// 匹配两位数 00-99
 const twoDigits = /\d\d?/;
 // 匹配三位数
 const threeDigits = /\d{3}/;
@@ -232,6 +247,13 @@ function format(dateObj, mask) {
 }
 
 
+/**
+ *
+ *
+ * @param {String} dateStr
+ * @param {String} format
+ * @returns
+ */
 function parse(dateStr, format) {
     if (typeof format !== 'string') {
         throw new Error('Invalid format in parse');
