@@ -1,0 +1,19 @@
+{
+  "name": "time",
+  "version": "1.0.0",
+  "description": "Parse and display dates and times in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wayxzz/time.git"
+  },
+  "author": "wayxz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wayxzz/time/issues"
+  },
+  "homepage": "https://github.com/wayxzz/time#readme"
+}
