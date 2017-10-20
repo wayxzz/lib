@@ -6,3 +6,7 @@ export function isIE() {
         return false;
     }
 }
+
+export function isArray(obj) {
+    return Array.isArray(obj);
+}
